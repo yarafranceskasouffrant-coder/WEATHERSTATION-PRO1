@@ -54,3 +54,7 @@ Cliquez ici: https://wokwi.com/projects/464194700139737089
 * **Filtrage temporel par persistance :** Implémentation d'une fonction de vérification qui attend plusieurs lectures consécutives de danger avant de déclencher l'alarme pour éliminer les fausses alertes.
 * **Moyennage glissant :** Stockage des dernières mesures dans un tableau FIFO (First In, First Out) pour lisser les données brutes des capteurs environnementaux.
 * **Sauvegarde Flash (Log) :** Enregistrement local de l'historique des alertes directement dans la mémoire flash du Raspberry Pi Pico pour conserver les données en cas de coupure de courant.
+
+## Difficultés rencontrées
+* **`ImportError` sur la bibliothèque SSD1306 :** Problème résolu en ajoutant manuellement le fichier de pilote autonome `ssd1306.py` dans l'interface de simulation de Wokwi.
+* **Erreurs de syntaxe `IndentationError` :** Problèmes d'alignement des lignes de code lors des copier-coller sur navigateur, corrigés en réalignant strictement les blocs de la boucle principale et des exceptions.
