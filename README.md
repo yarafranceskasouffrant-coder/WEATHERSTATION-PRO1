@@ -20,25 +20,24 @@ Cliquez ici:
 ## Composants utilisés
 | Composant | Quantité | Rôle |
 | :--- | :---: | :--- |
-| Raspberry Pi Pico | 1 | [cite_start]Cerveau principal du système (MicroPython) [cite: 80] |
-| Capteur DHT22 | 2 | [cite_start]Mesure de la température et de l'humidité (Zone 1 et Zone 2) [cite: 80] |
-| Capteur BMP280 (I2C) | 1 | [cite_start]Mesure de la pression atmosphérique et de la température [cite: 80] |
-| Capteur MQ-135 | 1 | [cite_start]Capteur de qualité de l'air / niveau de CO2 [cite: 80] |
-| Écran OLED SSD1306 (I2C) | 1 | [cite_start]Affichage des mesures et de l'historique en temps réel [cite: 80] |
-| LED RGB (Cathode commune) | 1 | [cite_start]Indicateur visuel de l'état global (Vert: OK, Rouge: Alerte) [cite: 80, 112, 116] |
-| Servomoteur SG90 | 1 | [cite_start]Simulation mécanique de l'ouverture d'une ventilation [cite: 80, 117] |
-| Buzzer passif | 1 | [cite_start]Émission de signaux sonores d'alerte en cas de danger [cite: 80, 118] |
-| Bouton poussoir | 2 | [cite_start]Navigation entre les menus OLED et réinitialisation [cite: 80] |
-| Résistances 220 Ohm | 3 | [cite_start]Protection de la LED RGB contre les surintensités [cite: 80] |
-| Résistances 10 kOhm | 2 | [cite_start]Résistances de pull-up pour la stabilisation des boutons [cite: 80] |
-| Potentiomètre | 1 | [cite_start]Simulation analogique des variations de la qualité de l'air (CO2) [cite: 80] |
-| Breadboard grande | 1 | [cite_start]Support de prototypage pour les connexions sans soudure [cite: 80] |
-| Câbles Dupont | 35 | [cite_start]Fils d'interconnexion pour relier les composants au Pico [cite: 80] |
+| Raspberry Pi Pico | 1 | [cite_start]Cerveau principal du système (MicroPython) |
+| Capteur DHT22 | 2 | [cite_start]Mesure de la température et de l'humidité (Zone 1 et Zone 2) |
+| Capteur BMP180 (I2C) | 1 | [cite_start]Mesure de la pression atmosphérique et de la température  |
+| Capteur MQ-135 | 1 | [cite_start]Capteur de qualité de l'air / niveau de CO2  |
+| Écran OLED SSD1306 (I2C) | 1 | [cite_start]Affichage des mesures et de l'historique en temps réel  |
+| LED RGB (Cathode commune) | 1 | [cite_start]Indicateur visuel de l'état global (Vert: OK, Rouge: Alerte)  |
+| Servomoteur SG90 | 1 | [cite_start]Simulation mécanique de l'ouverture d'une ventilation  |
+| Buzzer passif | 1 | [cite_start]Émission de signaux sonores d'alerte en cas de danger |
+| Bouton poussoir | 2 | [cite_start]Navigation entre les menus OLED et réinitialisation  |
+| Résistances 220 Ohm | 3 | [cite_start]Protection de la LED RGB contre les surintensités  |
+| Résistances 10 kOhm | 2 | [cite_start]Résistances de pull-up pour la stabilisation des boutons  |
+| Potentiomètre | 1 | [cite_start]Simulation analogique des variations de la qualité de l'air (CO2)  |
+| Breadboard grande | 1 | [cite_start]Support de prototypage pour les connexions sans soudure  |
+| Câbles Dupont | 35 | [cite_start]Fils d'interconnexion pour relier les composants au Pico  |
 
 ## Répartition du travail
 | Étudiant | Tâches réalisées |
 | :--- | :--- |
-| **Tommy** | Écriture du script MicroPython, implémentation de la machine à états pour l'OLED, gestion des blocs `try/except` et débogage des pilotes. |
 | **ETIENNE Maxi Christopher** | Implantation matérielle sur la breadboard virtuelle Wokwi, interconnexion des bus I2C et câblage/validation générale de la simulation. |
 | **SOUFFRANT Yara Franceska** | Exécution des plans de test, vérification des seuils d'alerte, création du dépôt GitHub et gestion de la documentation du projet. |
 
