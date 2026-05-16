@@ -12,10 +12,11 @@ Smart weather monitoring system built with Raspberry Pi Pico and MicroPython fea
 WeatherStation Pro est une station météo intelligente conçue avec un Raspberry Pi Pico et plusieurs capteurs environnementaux. Le système mesure en temps réel la température, l’humidité, la pression atmosphérique et la qualité de l’air dans différentes zones. Toutes les informations sont affichées sur un écran OLED avec une navigation entre plusieurs interfaces grâce à des boutons poussoirs. En cas de danger ou d’anomalie, une LED RGB, un buzzer et un servomoteur réagissent automatiquement pour simuler un système d’alerte et de ventilation.
 
 ## Lien de simulation Wokwi
-Cliquez ici: 
+Cliquez ici: https://wokwi.com/projects/464194700139737089
 
 ## Capture d'écran de la simulation
-![Simulation](images/simulation.png)
+![Simulation](images/<img width="800" height="902" alt="121_edited" src="https://github.com/user-attachments/assets/08db8f4d-5f30-4b58-977e-4f407c8498ad" />
+.png)
 
 ## Composants utilisés
 | Composant | Quantité | Rôle |
@@ -42,18 +43,14 @@ Cliquez ici:
 | **SOUFFRANT Yara Franceska** | Exécution des plans de test, vérification des seuils d'alerte, création du dépôt GitHub et gestion de la documentation du projet. |
 
 ## Tests réalisés
-| Test | Résultat attendu | Résultat obtenu | OK/NOK |
-| :--- | :---: | :---: | :---: |
-| Appui sur le bouton de navigation | [cite_start]L'écran OLED bascule fluidement entre les 4 menus (Zones, Air, Historique...) [cite: 115] | L'affichage change instantanément à chaque clic sans saut | **OK** |
-| Température ou humidité > Seuils | [cite_start]La LED change de couleur, le buzzer sonne et le servomoteur s'active à 90° [cite: 109, 116, 117] | La LED bascule, l'alerte sonore se déclenche et la ventilation s'ouvre | **OK** |
-| Déconnexion d'un capteur DHT22 | Le programme continue de tourner grâce au bloc `try/except` sans planter | Le système reste actif et capture l'erreur en arrière-plan | **OK** |
-| Stabilisation logique (Gaz/Air) | Ignorer les fluctuations de tension furtives à l'aide d'un filtrage dans le code | Les pics isolés sont filtrés, évitant les déclenchements d'alerte erronés | **OK** |
+| Test | Résultat attendu | Résultat obtenu | 
+| :--- | :---: | :---: |
+| Appui sur le bouton de navigation | [cite_start]L'écran OLED bascule fluidement entre les 4 menus (Zones, Air, Historique...)  | L'affichage change instantanément à chaque clic sans saut 
+| Température ou humidité > Seuils | [cite_start]La LED change de couleur, le buzzer sonne et le servomoteur s'active à 90°  | La LED bascule, l'alerte sonore se déclenche et la ventilation s'ouvre
+| Déconnexion d'un capteur DHT22 | Le programme continue de tourner grâce au bloc `try/except` sans planter | Le système reste actif et capture l'erreur en arrière-plan 
+| Stabilisation logique (Gaz/Air) | Ignorer les fluctuations de tension furtives à l'aide d'un filtrage dans le code | Les pics isolés sont filtrés, évitant les déclenchements d'alerte erronés 
 
 ## Améliorations possibles
 * **Filtrage temporel par persistance :** Implémentation d'une fonction de vérification qui attend plusieurs lectures consécutives de danger avant de déclencher l'alarme pour éliminer les fausses alertes.
 * **Moyennage glissant :** Stockage des dernières mesures dans un tableau FIFO (First In, First Out) pour lisser les données brutes des capteurs environnementaux.
 * **Sauvegarde Flash (Log) :** Enregistrement local de l'historique des alertes directement dans la mémoire flash du Raspberry Pi Pico pour conserver les données en cas de coupure de courant.
-
-## Difficultés rencontrées
-* **`ImportError` sur la bibliothèque SSD1306 :** Problème résolu en ajoutant manuellement le fichier de pilote autonome `ssd1306.py` dans l'interface de simulation de Wokwi.
-* **Erreurs de syntaxe `IndentationError` :** Problèmes d'alignement des lignes de code lors des copier-coller sur navigateur, corrigés en réalignant strictement les blocs de la boucle principale et des exceptions.
